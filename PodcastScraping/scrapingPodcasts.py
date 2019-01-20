@@ -14,7 +14,7 @@ links.append('https://www.podbean.com/podcast-detail/pje5k-74621/Drunk-Women-Sol
 #links.append('')
 
 #links.append('')
-page_link = links[6]
+page_link = links[0]
 
 
 page_response = requests.get(page_link, timeout = 5)
@@ -46,7 +46,7 @@ try:
         downloadlink = 'https://www.podbean.com' + thelink.attrs['href']
 
         # Create a PodcastScraper object for the new entry
-        x = PodcastScraper(theTitle, theDate, downloadlink)
+        x = PodcastScraper(theTitle, theDate, downloadlink, 'ADAM BUXTON')
 
         # And add it to the list of scraper objects
         scrapers.append(x)
